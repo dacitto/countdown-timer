@@ -1,11 +1,13 @@
 import Header from "./components/Header";
-import CountDownCard from "./components/CountDownCard";
+import CardsGrid from "./components/CardsGrid";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <Header />
-      <CountDownCard />
+      <CardsGrid />
+      <Footer />
     </>
   );
 }

@@ -1,3 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+:root {
+  --Grayish-blue: hsl(237, 18%, 59%);
+  --Soft-red: hsl(345, 95%, 68%);
+
+  --White: hsl(0, 0%, 100%);
+  --Dark-desaturated-blue: hsl(236, 21%, 26%);
+  --Very-dark-blue: hsl(235, 16%, 14%);
+  --black-blue: hsl(234, 17%, 12%);
+
+  --card-hight: 150px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: #eee;
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 5rem;
+  background-image: url("../img/bg-stars.svg"),
+    linear-gradient(var(--black-blue) 0%, var(--Dark-desaturated-blue) 90%);
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 14px;
+  height: 100vh;
+}
+.header {
+  color: var(--White);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.container {
+  display: grid;
+  width: 90%;
+  max-width: 820px;
+  margin: 0 auto;
+  gap: 0.5rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+.CountDownCard {
+  .card {
+    min-height: var(--card-hight);
+    display: grid;
+    //background-color: var(--Soft-red);
+    position: relative;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 10px #222;
+    /* &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      //transform: translateY(-100%);
+      top: 50%;
+      left: 0;
+      box-shadow: 0 0 10px rgba($color: #222, $alpha: 0.5);
+      background-color: #222;
+      
+    }*/
+    .card-part {
+      border-radius: 0.3rem;
+      background-color: #fff;
+      border-bottom: 1px solid #222;
+      color: var(--Soft-red);
+      background-color: var(--Dark-desaturated-blue);
+      font-size: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 0;
+      overflow: hidden;
+      &.top {
+        filter: contrast(90%);
+        .number {
+          transform: translateY(calc(var(--card-hight) / 4));
+        }
+      }
+      &.bottom {
+        .number {
+          transform: translateY(calc(var(--card-hight) / -4));
+        }
+      }
+    }
+  }
+  .label {
+    color: var(--Grayish-blue);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+.footer {
+  background-image: url("../img/pattern-hills.svg");
+  background-size: cover;
+  position: absolute;
+  min-height: 200px;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
