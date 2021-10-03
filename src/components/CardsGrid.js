@@ -16,7 +16,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
         <CountDownCard label="days" time={days}></CountDownCard>
         <CountDownCard label="hours" time={hours}></CountDownCard>
         <CountDownCard label="minuts" time={minutes}></CountDownCard>
-        <CountDownCard label="seconds" time={seconds++}></CountDownCard>
+        <CountDownCard label="seconds" time={seconds}></CountDownCard>
       </>
     );
   }
@@ -24,7 +24,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
 const CardsGrid = () => {
   return (
     <div className="container">
-      <Countdown date={Date.now() + 8640000000} renderer={renderer} />
+      <Countdown date={Date.now() + 8630000000} renderer={renderer} />
     </div>
   );
 };

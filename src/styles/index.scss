@@ -117,4 +117,28 @@ body {
   bottom: 0;
   width: 100%;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    li {
+      list-style-type: none;
+      transition: 1s all;
+      path {
+        transition: 1s all;
+      }
+      &:hover {
+        transition: 0.5s all;
+        transform: scale(1.2);
+        path {
+          transition: 0.2s all ease-in-out;
+          fill: #fff;
+        }
+      }
+    }
+  }
 }
