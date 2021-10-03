@@ -17,6 +17,7 @@
 }
 
 body {
+  perspective: 75px;
   box-sizing: border-box;
   margin: 0;
   padding-top: 5rem;
@@ -81,6 +82,12 @@ body {
       overflow: hidden;
       &.top {
         filter: contrast(90%);
+        transition: 0.5s all ease-in-out;
+        &:hover {
+          //transform-origin: center;
+          transition: 0.5s all linear;
+          transform: translateY(100%) rotateX(180deg);
+        }
         .number {
           transform: translateY(calc(var(--card-hight) / 4));
         }
